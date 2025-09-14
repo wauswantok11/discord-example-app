@@ -33,7 +33,6 @@ app.post('/interactions', verifyKeyMiddleware(process.env.PUBLIC_KEY), async fun
   if (type === InteractionType.PING) {
     return res.send({ type: InteractionResponseType.PONG });
   }
-
   /**
    * Handle slash command requests
    * See https://discord.com/developers/docs/interactions/application-commands#slash-commands
